@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>👽</title>
 <style>
-  body {
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
-    @font-face {
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+        @font-face {
             font-family: 'sitelen seli kiwen asuki';
             src: url('media/sitelenselikiwenasuki.ttf') format('truetype');
         }
@@ -27,6 +26,23 @@
             font-family: 'DFPKanTeiRyu-XB';
             src: url('media/Modified-DFPKanteiryu-XB.ttf') format('truetype');
         }
+        @font-face {
+        font-family:"tokipona";
+        src: url('https://greb.ninja/media/sitelenselikiwenasuki.ttf')  format('truetype');  
+        }
+        @font-face {
+        font-family:"russian";
+        src: url('https://greb.ninja/media/FedorovskUnicode.ttf')  format('truetype');  
+        }
+        @font-face {
+        font-family:"japanese1";
+        src: url('https://greb.ninja/media/Seibi Minato.otf')  format('opentype');  
+        }
+        @font-face {
+        font-family:"japanese2";
+        src: url('https://greb.ninja/media/Modified-DFPKanteiryu-XB.ttf')  format('truetype');  
+        }
+  body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -44,7 +60,7 @@
     text-align: center;
   }
   .left {
-    font-family: "Comic Sans MS", Comic Sans, sans-serif;
+    font-family: "Comic Sans MS", Comic Sans, cursive;
     background-image: url("media/igrim.png");
   }
   .right {
@@ -79,7 +95,7 @@
         <select onchange="changeLanguage(this.value)">
           <option value="en">English</option>
           <option value="ru">Русский</option>
-          <option value="fr">French</option>
+          <option value="fr">Français</option>
           <option value="jp">日本語</option>
           <option value="toki">toki pona</option>
           <option value="abc">test</option>
@@ -117,15 +133,15 @@
         document.getElementById('link2-heading').innerText = 'لينك 2';
         document.getElementById('link2-text').innerText = 'بۆلشۆي كامېن اند نيژنېيانگارسك';
         } else if (lang === 'toki') {
-        document.getElementById('left-half').style.fontFamily = 'sitelen seli kiwen asuki';
-        document.getElementById('right-half').style.fontFamily = 'sitelen seli kiwen asuki';
+        document.getElementById('left-half').style.fontFamily = 'tokipona';
+        document.getElementById('right-half').style.fontFamily = 'tokipona';
         document.getElementById('link1-heading').innerText = 'lipu-toki pi jan soweli [toki akesi jelo kijetesantakalu olin soweli akesi nasa]';
         document.getElementById('link1-text').innerText = 'toki o! ni li lipu-toki mi. sina wile la sina kama sona e ni:: ijo-mute li pona tawa mi';
         document.getElementById('link2-heading').innerText = 'lipu pi [kijetesantakalu utala lawa epiku pimeja uta]';
         document.getElementById('link2-text').innerText = 'lipu !!lawa!! musi sona [kijetesantakalu]. tenpo ni la ona li pali e lipu ni tan kulupu [pakala open sitelen ilo] li pakala suli e lupa ma';
         } else if (lang === 'ru') {
         document.getElementById('left-half').style.fontFamily = 'Comic Sans MS, Comic Sans, cursive';
-        document.getElementById('right-half').style.fontFamily = 'Fedorovsk Unicode, cursive';
+        document.getElementById('right-half').style.fontFamily = 'russian, cursive';
         document.getElementById('link1-heading').innerText = 'тайкофанский блог';
         document.getElementById('link1-text').innerText = 'привет Мой блог Являются для тебя; Мне нравится Много вещей что будете узнать Если бы вы хотели Хотите видеть фотографию моего сына? Очень приятно';
         document.getElementById('link2-heading').innerText = 'гребсайт';
@@ -138,8 +154,8 @@
         document.getElementById('link2-heading').innerText = 'Link 2';
         document.getElementById('link2-text').innerText = 'Nullam ac velit sed neque bibendum aliquet. Fusce consequat mauris ut est accumsan, at posuere purus dapibus. Quisque vel luctus elit. Donec fermentum finibus sapien id tincidunt.';
         } else if (lang === 'jp') {
-        document.getElementById('left-half').style.fontFamily = 'Seibi-Minato-B Regular, sans-serif';
-        document.getElementById('right-half').style.fontFamily = 'DFPKanTeiRyu-XB, fantasy';
+        document.getElementById('left-half').style.fontFamily = 'japanese1, sans-serif';
+        document.getElementById('right-half').style.fontFamily = 'japanese2';
         document.getElementById('link1-heading').innerText = 'タイコファンのブログ';
         document.getElementById('link1-text').innerText = 'こんいちは、俺様のブログだ。たくさんのことが好きだ。お前が学ぶ（お前は望むなら）';
         document.getElementById('link2-heading').innerText = 'グレブサイト';
